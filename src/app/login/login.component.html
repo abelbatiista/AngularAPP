@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/39a21bbe1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="./imagen/icono.jpg">
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="myCard">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="myLeftCtn">
+                        <form [formGroup]="loginForm" class="myForm text-center" >
+                            <header>Iniciar Sesión</header>
+                            <div class="form-group">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input formControlName="email" class="myInput" [(ngModel)]="email" name="email" type="email" placeholder="Correo Electrónico"
+                                id="correo" required>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                    <input formControlName="password" class="myInput" [(ngModel)]="password" name="password"  type="password" id="password"
+                                    placeholder="Contraseña" required>
+                                </div>
+                                <br>
+                                <input type="submit" [disabled]="loginForm.invalid" (click)="IniciarSesion()" class="button" value="Ingresar"><br><br>
+                                <a class="link" routerLink="/medicos">¿No tienes una cuenta? Registrate aquí</a><br><br>
+                                <a class="link" href="../../../APK/APK/ionic.apk" download="">¡Descarga nuestra App Aquí!</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="myRightCtn">
+                        <div class="box">
+                            <header>App para Médicos</header>
+                            <p>Esta aplicación está dirigida a los médicos
+                                de República dominicana.
+                                Cuenta con diferentes módulos y funcionalidades muy
+                                exactas para el sector medico.
+                            </p>
+                            <a class="link" href="https://youtu.be/xYvY7jYjss0" target="_blank">Acerca de</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+
+</html>
